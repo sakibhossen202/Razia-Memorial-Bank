@@ -42,7 +42,9 @@ function updateTwoAmount(id, depositNumber){
 //withdraw button event handler
 document.getElementById("withdrawBtn").addEventListener("click", function(){
    const withdrawCount = getInput("withdrawInput");
-   console.log(withdrawCount);
+   updateTwoAmount("afterWithdraw" ,withdrawCount)
+   updateTwoAmount("currentBalance", -1* withdrawCount)
+   document.getElementById("withdrawInput").value = "";
 
     
 
